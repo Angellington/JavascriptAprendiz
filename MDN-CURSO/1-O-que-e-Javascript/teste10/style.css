@@ -1,0 +1,15 @@
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    border:  2px solid rebeccapurple;
+    border-radius: 10px;
+
+    background: rgba(200, 34, 24, 0.2);
+
+    padding: 2px 10px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
