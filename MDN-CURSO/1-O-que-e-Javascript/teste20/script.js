@@ -8,4 +8,4 @@ function atualizarNome(){
 }
 
 // Chamar o evento
-para.addEventListener("click", atualizarNome)
+    para.addEventListener("click", atualizarNome)
