@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+@media (width >= 768px) {
+    dialog {
+        width: 452px;
+        border: 2px solid rgb(66, 66, 66);
+        border-radius: 10px;
+        height: 705px;
+        
+        padding: 0;
+    }
+    dialog::backdrop{
+        background-color: rgba(0, 0, 0, 0.473);
+    }
+
+    /*  Modal Header */
+
+    dialog .modal {
+        padding: 4px;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+
+        background-color: rgba(238, 130, 238, 0);
+    }
+    dialog #Cabecario {
+        padding: 12px 0px 20px 20px;
+    }
+    dialog #Cabecario h1 {
+        display: flex;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.6rem;
+        background-color: rgba(255, 228, 196, 0);
+        margin: 0;
+        padding: 4px;
+    }
+    dialog #Cabecario p {
+        font-family: sans-serif;
+        color: #75757585;
+        padding: 0;
+        margin: 0;
+        background-color: rgba(0, 255, 255, 0);
+    }
+    dialog .icone {
+        background-color: rgba(255, 255, 0, 0);
+        cursor: pointer;
+        padding: 8px;
+        margin: 0;
+        height: fit-content;
+        display: flex;
+        justify-content: end;
+        font-size: 18px ;
+    }
+
+    /* Formulario em Si*/
+    form {
+        background-color: aqua;
+        padding: 1.5rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .campo {
+        display: flex;
+        flex-direction: column;
+        color: #1E1E1E;
+        margin-bottom: 1rem;
+    }
+    .campo label {
+        margin-bottom: 4px;
+    }
+    .campo input {
+        border: 1px solid #D9D9D9;
+        padding: 12px;
+        border-radius: 8px;
+    }
+    .campo input::placeholder {
+       color: #B3B3B3; 
+    }
+
+    .campo-checkbox {
+        background-color: bisque;
+        margin-bottom: 12px;
+    }
+    .campo-checkbox p {
+        padding: 0;
+        margin: 0;
+    }
+    .nasc {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nasc > label {
+        color: #000000;
+        font-size: 12px;
+        margin-left: 14px;    
+    }
+    .nasc > #data-nasc {
+        position: fixed;
+        
+    }
+
+    .nasc > input {
+        padding: 12px;
+        width: 70%;
+        box-sizing: border-box;
+        border: 1px solid #49454F;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+    
+
+}
+
+@media (max-width: 768px) and (min-width: 334px) {
+    dialog {
+        width: 100%;
+    }
+}
