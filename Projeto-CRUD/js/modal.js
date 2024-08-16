@@ -1,5 +1,11 @@
-const botaoModal = document.querySelector(".create-contain")
+const abrirDialog = document.querySelector(".create-contain")
+const modal = document.querySelector("dialog")
 
-botaoModal.onclick = function() {
-    prompt("Digite algo")
+
+abrirDialog.onclick = function() {
+    modal.showModal()
+}
+
+fecharDialog.onclick = function() {
+    modal.close()
 }

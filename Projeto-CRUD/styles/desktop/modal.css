@@ -8,6 +8,7 @@
         height: 705px;
         
         padding: 0;
+        overflow: hidden;
     }
     dialog::backdrop{
         background-color: rgba(0, 0, 0, 0.473);
@@ -45,17 +46,21 @@
     dialog .icone {
         background-color: rgba(255, 255, 0, 0);
         cursor: pointer;
-        padding: 8px;
+        padding: 16px;
         margin: 0;
         height: fit-content;
         display: flex;
         justify-content: end;
-        font-size: 18px ;
+        font-size: 18px;
+        transition: 0.4s;
+    }
+    dialog .icone:hover {
+        transform: scale(1.40);
     }
 
     /* Formulario em Si*/
     form {
-        background-color: aqua;
+        background-color: rgb(255, 255, 255);
         padding: 1.5rem;
         font-family: Arial, Helvetica, sans-serif;
     }
@@ -78,7 +83,7 @@
     }
 
     .campo-checkbox {
-        background-color: bisque;
+        background-color: rgba(255, 228, 196, 0);
         margin-bottom: 12px;
     }
     .campo-checkbox p {
@@ -88,16 +93,29 @@
     .nasc {
         display: flex;
         flex-direction: column;
+        z-index: 2;
+        outline: none;    
+        margin-top: 24px;
     }
+
 
     .nasc > label {
         color: #000000;
         font-size: 12px;
-        margin-left: 14px;    
+        margin-left: 14px; 
+        background-color: #ffffff;
+        padding: 0px 8px 0 8px;   
+        position: relative;
+        outline: none;
     }
+ 
     .nasc > #data-nasc {
-        position: fixed;
-        
+        position: absolute;
+        transform: translateY(-10px);
+        margin-bottom: 200p;
+        z-index: 3;
+        line-height: 20px;
+
     }
 
     .nasc > input {
@@ -105,10 +123,49 @@
         width: 70%;
         box-sizing: border-box;
         border: 1px solid #49454F;
-        border-radius: 8px;
+        border-radius: 4px;
         font-size: 16px;
+        outline: none;
+        transition: 0.2s ease;
     }
-    
+    .nasc > input:focus, .nasc > .nasc input:valid {
+        border: 3px solid #65558F;
+    }
+
+    .nasc label > p {
+        padding: 0;
+        margin: 10px 0 10px 0px;
+    }
+
+    .campo label > p {
+        padding: 0px;
+        margin: 0px;
+        margin-top: 10px;
+    }
+
+    form .enviar {
+        background-color: #65558f00;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+
+    }
+
+    form .enviar input{
+        background-color: #2C2C2C;
+        color: white;
+        width: 40%;
+        width: 249px;
+        height: 40px;
+        border-radius: 8px;
+        letter-spacing: 1px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        cursor: pointer;
+        transition: ease-in 0.2s;
+    }
+    form .enviar input:hover {
+        transform: scale(1.09);
+    }
 
 }
 
