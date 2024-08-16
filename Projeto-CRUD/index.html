@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles/desktop/home.css">
     <link rel="stylesheet" href="./styles/android/home.css">
     <!-- Modal -->
+     <link rel="stylesheet" href="./modal/modal.css">
 
 </head>
 <body>
@@ -52,17 +53,77 @@
                             <td class="gender">M</td>
                             <td class="datanasc">20-06-2005</td>
                             <td class="email">superetro85@gmail.com</td>
-                            <td class="actions"></td>
+                            <td class="actions">
+                                <div class="UR">
+                                    <i class="fa-solid fa-pen-to-square" id="edit"></i>
+                                    <i class="fa-solid fa-trash" id="delete"></i>
+                                </div>
+                            </td>
                         </tr>
+                        
                     </tbody>
                 </table>
             </div>
         </div>
     </section>
+    <!-- Formulario Modal-->
+
+    <dialog>
+        <div class="novo">
+            <div>
+            </div>
+            <div id="Cabecario">
+                <h1>Insira os Dados</h1>
+                <p>Utilizaremos um CRUD</p>
+            </div>
+            <div class="icone" id="fechar">
+                <i class="fa-solid fa-x" id="closeIcon"></i>
+            </div>
+        </div>
+
+        <!--Formulario-->
+        <form action="#" method="post">
+            <div class="campo">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" placeholder="David" required>
+            </div>
+            <div class="campo">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" id="sobrenome" placeholder="Junior" required>
+            </div>
+            <div class="campo-checkbox">
+                <p>Gênero</p>
+                <label>
+                    <input type="radio" name="gender" value="male" required> M
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female" required> F
+                </label>
+            </div>
+            <div class="nasc">
+                <label for="nasc" id="data-nasc">DATA DE NASCIMENTO</label>
+                <input type="date" name="nasc" required>
+                <label for="nasc"><p>dd//mm/yyyy</p></label>
+            <div class="campo">
+                <label for="email"><p>EMAIL</p></label>
+                <input type="text" id="email" placeholder="robertocarlos.oliveira@gmail.com" required>
+            </div>
+            
+            <div class="enviar">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+        
+    </dialog>
+
+    
     <!-- Bootstrap Lib-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <!-- Script Javascript Modal-->
     <script src="./js/modal.js"></script>
+
+    <!-- Flatcon-->
+    <script src="https://kit.fontawesome.com/44d91e0751.js" crossorigin="anonymous"></script>
 </body>
 </html>

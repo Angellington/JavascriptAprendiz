@@ -34,6 +34,8 @@
         font-weight: bold;
         letter-spacing: 3px;
         font-size: 40px;
+        padding: 0;
+        margin: 0;
     }
     
 
@@ -45,14 +47,21 @@
         align-items: center;
         padding: 6px;
         gap: 14px;
-        width: 12em;
+        width: 10em;
         height: 4em;
 
+        transition: 0.2s ease-in;
         cursor: pointer;
     }
 
     .create-contain h4 {
         color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .create-contain:hover {
+        background-color: #69c785;
     }
 
 
@@ -63,7 +72,7 @@
 
 
     .tabela {
-        background-color: aquamarine;
+        background-color: rgba(127, 255, 212, 0);
         width: 100%;
         display: flex;
         align-items: center;
@@ -72,7 +81,6 @@
     }
     .ContainerTable {
         background-color: black;
-        padding: 0.15em;
         border-radius: 5px;
     }
     .tabela .table {
@@ -81,15 +89,32 @@
         box-shadow: 0 0 10px;
         border-radius: 10px;
         height: 100%;
+        padding: 0;
+        margin: 0;
     }
     .thead tr th{
         background-color: #F0F0F0;
         text-align: center;
+    
         
     }
     tbody tr td {
         text-align: center;
+        align-content: center;
 
+    }
+
+
+    table tbody i {
+        font-size: 1.6rem;
+        background-color: #ffffff;
+        padding: 4px;
+        margin: 0;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    table tbody i #edit {
+        color: red;
     }
   
 
