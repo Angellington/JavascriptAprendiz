@@ -18,11 +18,6 @@ function readAll() {
     var object = localStorage.getItem('object');
 
     // Se o Object não estiver no localstorage inicializa com um array vazio
-    if (!object) {
-        object = '[]';
-        localStorage.setItem('object', object);
-    }
-
 
     // Aqui ele transforma aquele object em dado JSON
     var objectdata = JSON.parse(object);
@@ -51,24 +46,19 @@ function create(event) {
     var form = document.querySelector(".add_div").style.display = "none";
 }
 
-function add(event) {
+function add() {
     var name = document.querySelector(".name").value;
     var email = document.querySelector(".email").value;
-
-    // Obter dados do LocalStorage
-    var object = localStorage.getItem('object');
-    var data = JSON.parse(object);
 
     // Adicionar novo objeto
     var newObj = {id: data.length + 1, name: name, email: email};
     data.push(newObj)
 
-    // Atualizar o localStorage
-    localStorage.setItem('object', JSON.stringify(data));
 
-    var form = document.querySelector(".create_form").style.display = "none";
-    var form = document.querySelector(".add_div").style.display = "block";
+    var form = document.querySelector(".create_form").style.display = "block";
+    var formad = document.querySelector(".add_div").style.display = "none";
 
     readAll()
+    
 }
 
