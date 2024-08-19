@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixas de PopUp</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container {
+            background-color: bisque;
+            margin: 5em;
+            padding: 10em;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 3em;
+        }
+        button {
+            padding: 1.5em 3em;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Popup Boxes</h1>
+        <div class="container">
+            <button class="alert" onclick="alerta()">Alert</button>
+            <button class="confirm" onclick="confirmar()">Confirm</button>
+            <button class="prompt" onclick="promptar()">Prompt</button>
+            <button class="breakline" onclick="QuebrarLinhaDemo()">Quebra de Linha</button>
+        </div>
+        <div class="nome">Nome</div>
+</body>
+<script>
+    // O Javascript possui três tipos de caixas de Pop Up 
+    // (Alert Box) (Confirm Box) (Promp Box)
+
+    // Output: "Este o window.alert()"
+    function alerta() {
+        alert("Este o [window.alert(...)]")
+    }
+
+    // Output: "Vai aparecer uma caixa de confirmação"
+    function confirmar(){
+        confirm("Clique em OK! [window.confirm()]")
+    }
+
+    // Output: É um prompt para digitar alguma informação
+    function promptar(){
+        let nome = prompt("Digite o seu nome: [window.prompt()]")
+        divnome = document.querySelector(".nome")
+        divnome.innerHTML = nome
+    }
+
+    // Quebra de Linha n/
+    function QuebrarLinhaDemo() {
+        alert("A quebra de linha usa o \n desse modo")
+    }
+    
+
+</script>
+</html>

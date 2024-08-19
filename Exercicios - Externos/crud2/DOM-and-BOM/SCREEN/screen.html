@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen</title>
+</head>
+<body>
+    <h1>Screen Experimnets</h1>
+
+    <p>A largura é: </p>
+    <p id="largura"></p> <br>
+    <p>A altura é: </p>
+    <p class="height"></p> <br>
+
+    <p>Largura Disponivel</p>
+    <p class="availWidth"> </p> <br>
+
+    <p class="availHeight"> </p> <br>
+
+    <p class="colorDepth"> </p> <br>
+
+    <p class="pixelDepth"> </p> <br>
+</body>
+<script>
+    // Largura
+    largura = document.querySelector("#largura")
+    largura.innerHTML = 'Screen Largura: ' + screen.width;
+
+    // Altura
+    altura = document.querySelector('.height')
+    altura.innerHTML = 'Screen Altura: ' + screen.height;
+
+    // Avail Width - Entrega a Largura Disponível da Tela
+    AVLargura = document.querySelector('.availWidth')
+    AVLargura.innerHTML = 'AV: ' + screen.availWidth
+
+    // Avail Height - Entrega a Altura Disponível da Tela
+    AVAltura = document.querySelector('.availHeight')
+    AVAltura.innerHTML = 'AV: ' + screen.availHeight
+
+    // ColorDepth - Retorna os bits da cor  / pixel
+    ColorDepth = document.querySelector('.colorDepth')
+    ColorDepth.innerHTML =  'Color Depth: ' + screen.colorDepth + ' bits'
+
+    // PixelDepth -
+    PixelDepth = document.querySelector('.pixelDepth')
+    PixelDepth.innerHTML = 'Pixel Depth: ' + screen.pixelDepth + ' bits'
+</script>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigator</title>
+</head>
+<body>
+    <h1>Window Navigator</h1>
+
+    <p class="cookie"></p>
+    <p class="app"></p>
+    <p class="appcodename"></p>
+    <p class="browserengine"></p>
+    <p class="version"></p>
+    <p class="agent"></p>
+    <p class="plataforma"></p>
+    <p class="language"></p>
+    <p class="IsOnline"></p>
+    <p class="java"></p>
+
+    <script>
+
+        // --- Saber dos Cookies --- Output: Ativação dos Cookies
+        CookieSituation = document.querySelector(".cookie");
+        CookieSituation.innerHTML = "Cookie true/false: " + navigator.cookieEnabled;
+
+        // ---  Aplication name ---- Output: Nome da Aplicação
+        AplicationName = document.querySelector(".app");
+        AplicationName.innerHTML = "O nome da Aplicação é: " + navigator.appName
+
+        // ---  Aplication Code Name --- Output: Codigo da App
+        AppCodeName = document.querySelector(".appcodename")
+        AppCodeName.innerHTML = "O Codigo da Aplicação: " + navigator.appCodeName
+
+        // --- Engine do Browser --- Output: Produto
+        Product = document.querySelector(".browserengine")
+        Product.innerHTML = "A Engine da Aplicação é: " + navigator.product
+
+        // --- Versão do Browser ---
+        BrowserVersion = document.querySelector(".version")
+        BrowserVersion.innerHTML = "A versão da aplicação é: " + navigator.appVersion;
+
+        // -- A Empresa que está por trás da Aplicação --
+        UserAgent = document.querySelector(".agent")
+        UserAgent.innerHTML = "O Agente do Servidor: " + navigator.userAgent
+
+        // -- Plataforma de Navegação --
+        Platform = document.querySelector(".plataforma")
+        Platform.innerHTML = "A Plataforma de Navegação: " + navigator.platform
+
+        // -- Linguagem de Navegação --
+        BrowserLanguage = document.querySelector(".language")
+        BrowserLanguage.innerHTML = "A Linguagem de Navegação é: " +
+        navigator.language
+
+        // -- O Navegador está online? --
+        IsOn = document.querySelector(".IsOnline")
+        IsOn.innerHTML = "O navegador está online: " + navigator.onLine
+
+        // O Java está ativado?
+        JavaOn = document.querySelector(".java")
+        JavaOn.innerHTML = "O Java está ativado: " + navigator.javaEnabled()
+    </script>
+</body>
+</html>

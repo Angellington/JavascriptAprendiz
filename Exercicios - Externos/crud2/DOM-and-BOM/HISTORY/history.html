@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window History</title>
+</head>
+<body>
+    <h1>Window History</h1>
+    <p class="history"></p>
+    <input type="button" value="Voltar" onclick="goBack()">
+
+    <input type="button" value="ASeguir" onclick="goFoward()">
+
+    <script>
+
+        // Retorna para a Última Página
+        function goBack() {
+            window.history.back()
+        }
+
+        // Vai para a próxima página
+        function goFoward() {
+            window.history.forward()
+        }
+    </script>
+</body>
+</html>

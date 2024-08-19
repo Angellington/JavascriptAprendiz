@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing Event</title>
+</head>
+<body>
+    <h1>Timing Events</h1>
+
+    <p>Set Time Out - Um tempo para a execução</p>
+    <button id="startTimer">Clique aqui!</button>
+    <button id="stopTimer"> PARE </button>
+    <p id="Paragrafo"></p>
+
+    <h1>Time Interval</h1>
+    <p id="interval"></p>
+    <button id="ZaWarudo">Za Warudo</button>
+
+
+
+    <script>
+        // Defini a Variavel
+        let MyVar
+
+        // Função Alerta
+        function alerta(){
+            alert("Depois de um tempo")
+        }
+
+        // Time Out armazenado na função
+        document.querySelector("#startTimer").onclick = function() {
+            myVar = setTimeout(alerta, 3000)
+        }
+
+        // Clear Time Out contra a função
+        document.querySelector("#stopTimer").onclick = function() {
+            para = document.querySelector("#Paragrafo")
+            clearTimeout(myVar);
+            para.innerHTML = "Parado"
+        }
+
+        // Interval - Horário Atual
+
+
+        const Tempo = setInterval(myTimer, 1000);
+
+        function myTimer(){
+            const d = new Date();
+            document.querySelector("#interval").innerHTML = d.toLocaleString();
+        }
+
+        ZaWarudo = document.querySelector("#ZaWarudo")
+        ZaWarudo.onclick = function() {
+            clearInterval(Tempo)
+            ZaWarudo.disabled = true;
+        }
+
+
+        
+    </script>
+</body>
+</html>

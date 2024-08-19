@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Javascript Window</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        document.querySelector("#demo").innerHTML =
+        `A largura do Browser atualmente é: ` + window.innerWidth + "px <br>" + 
+        // Output: O Browser exibe o (valor exato)
+        `A altura do Browser atualmente é ` + window.innerHeight + "px"; 
+        // Output: O Browser exibe o (valor exato)
+    </script>
+</body>
+</html>
