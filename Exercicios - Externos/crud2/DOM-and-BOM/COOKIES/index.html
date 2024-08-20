@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+<body>
+    <!-- Cookies são dados armazenados em Textos Pequenos -->
+
+    <h1>Javascript Cookie</h1>
+
+    <p class="leitura"></p>
+    <button class="alerta">Aparecer Cookie</button>
+    <button class="deletar">Deletar</button>
+
+    <script>
+        // Criar Cookie
+        document.cookie = "username=Minerva";
+
+        // Colocar a data de expiração
+        document.cookie = 'username=Minerva; expires=Thu, 20 Jun 2025 12:00:00 UTC';
+
+        // Adicionar o caminho a qual o Cookie pertence
+        document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+
+        // Adicionar Variável
+        let COOKIE = document.cookie;
+        let para = document.querySelector(".leitura")
+        para.innerHTML = document.cookie
+
+        let alerta = document.querySelector(".alerta")
+        alerta.onclick = function(){
+            alert(document.cookie);
+        }
+
+        let DeletarCookie = document.querySelector(".deletar")
+        DeletarCookie.onclick = function(){
+            cookie.document = "username=;"
+        }
+
+        // Para deletar um Cookie, é só não especificar o valor.
+    </script>
+</body>
+</html>
