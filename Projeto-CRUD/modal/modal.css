@@ -8,8 +8,11 @@
         height: 705px;
         
         padding: 0;
-        overflow: hidden;
+        overflow: auto;
     }
+    dialog::-webkit-scrollbar {
+        display: none;
+      }
     dialog::backdrop{
         background-color: rgba(0, 0, 0, 0.473);
     }
@@ -169,6 +172,8 @@
     form .enviar input:hover {
         transform: scale(1.09);
     }
+
+
 
 }
 
