@@ -73,6 +73,11 @@
         background-color: #69c785;
     }
 
+    /* Botão Flutuante é nulo no DESKTOP*/
+    .floating-button {
+        display: none;
+    }
+
 
 
 

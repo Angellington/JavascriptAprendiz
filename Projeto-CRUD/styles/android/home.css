@@ -1,7 +1,10 @@
 @media (max-width: 768px) and (min-width: 200px) {
     body {
-        padding: 0;
-        margin: 0;
+        background-image: url(../images/background.png);
+
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
     }
     header {
         width: 100%;
@@ -47,6 +50,7 @@
         cursor: pointer;
         transform: translateY(80vh);
         transition: ease 0.2s;
+        display: none;
     }
     .create-contain svg {
         size: 20px;
@@ -59,6 +63,144 @@
         height: 10.4vh;
         color: aliceblue;
         background-color: #7fd89a;
-        
     }
+    /*Botão Flutuante*/
+    .floating-button {
+        background-color: #69c785;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 8vh; /* Largura do botão */
+        height: 8vh; /* Altura do botão */
+        border-radius: 50%; /* Bordas arredondadas para criar um círculo */
+        cursor: pointer;
+        transition: background-color 0.2s ease; /* Animação para a cor de fundo */
+        position: fixed;
+        right: 10px; /* Ajuste a distância da borda direita */
+        bottom: 10px; /* Ajuste a distância da borda inferior */
+        margin: 0 2em 2em 0;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0);
+    }
+    .floating-button:hover {
+        transform: scale(1.2);
+        color: aliceblue;
+        background-color: #7fd89a;
+    }
+
+    section {
+        padding: 10px;
+    }
+  
+    td {
+        border-radius: 200px;
+    }
+    
+
+    table {
+        border: 20px solid rgb(175, 255, 192);
+        border-collapse: collapse;
+    }
+    table thead tr {
+        display: none;
+    }
+    table tr {
+        display: block;
+        border: 1px solid rgba(255, 255, 255, 0);
+        margin-top: 20px;
+        background-color: #ffffff;
+        padding: 0 0 0 1px;
+        box-shadow: 0 0 2px rgba(0, 0, 0);
+        border-radius: 20px;
+        font-size: 16px;
+        width: 100%;
+    }
+    table th, table td{
+        padding: .5em;
+    }
+    table td {
+        text-align: right;
+        display: block;
+        font-size: 1em;
+        margin: -2px;
+        background: none;
+    }
+
+    table td::before {
+        content: attr(data-title) " ";
+        float: left;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+    table tbody {
+        background: none;
+    }
+    tbody td:nth-child(even){
+        background-color: rgb(245, 245, 245);
+        border-radius: 0px;
+        width: 100%;
+    }
+
+
+
+    /* Icones */
+    table tbody i {
+        font-size: 1.6rem;
+        background-color: #ffffff00;
+        padding: 4px;
+        margin: 0;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    table .UR > #edit  {
+        background-color: #A9DBB8;
+        transition: 0.2s ease-in;
+    }
+    table .UR > #edit:hover  {
+        background-color: #69c785;
+        transform: scale(1.06);
+    }
+    table .UR > #delete  {
+        background-color: #dba9a9;
+        transition: 0.2s ease-in;
+    }
+    table .UR > #delete:hover  {
+        background-color: #c76969;
+        transform: scale(1.06);
+    }
+
+    /* Bootstrap Reset */ 
+    table.table {
+        border: black;
+        box-shadow: none;
+        border-radius: none;
+    }
+    td.id {
+        background:none;
+    }
+    td.nome {
+        background: none;
+    }
+    td.sobrenome {
+        background: none;
+    }
+    td.gender {
+        background: none;
+    }
+    td.datanasc {
+        background: none;
+    }
+    td.email {
+        background: none;
+    }
+    td.actions {
+        background: none;
+    }
+  
+  
+  
+  
+  
+  
+
 }
