@@ -120,7 +120,7 @@
         </div>
 
         <!--Formulario-->
-        <form action="#" method="post">
+        <form id="formulario">
             <div class="campo">
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" placeholder="David" required>
@@ -132,10 +132,10 @@
             <div class="campo-checkbox">
                 <p>Gênero</p>
                 <label>
-                    <input type="radio" name="gender" value="male" required> M
+                    <input type="radio" name="gender" value="M" required> M
                 </label>
                 <label>
-                    <input type="radio" name="gender" value="female" required> F
+                    <input type="radio" name="gender" value="F" required> F
                 </label>
             </div>
             <div class="nasc">
@@ -158,7 +158,9 @@
 
 
     <!-- Script Javascript Modal-->
-    <script src="./js/modal.js"></script>
+    <script async src="./js/modal.js"></script>
+    <!-- Script Armazenar dados no LocalStorage-->
+     <script async src="./js/armazenardados.js"></script>
 
     <!-- Flatcon-->
     <script src="https://kit.fontawesome.com/44d91e0751.js" crossorigin="anonymous"></script>
