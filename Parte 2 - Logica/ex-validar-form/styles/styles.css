@@ -39,7 +39,7 @@ body {
 
 .formulario {
     background-color: var(--primary-color);
-    margin: 20vw;
+    margin: 5vw 30vw;
     padding: 3vw;
     border-radius: 20px;
     display: flex;

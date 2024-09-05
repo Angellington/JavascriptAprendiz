@@ -17,7 +17,7 @@ form.addEventListener('submit', function(e){
     nasc = inputNasc.value;
     email = inputEmail.value;
     password = inputPassword.value;
-
+e
     
     // Fazer a validação e obter a mensagem e o status
 
@@ -64,7 +64,7 @@ function validar(nome, sobrenome, nasc, email, password){
         return {msg: senhaValidacao.msg, isValid: false};
     }
     
-    
+
     return {msg: 'Formulário validado', isValid: true}
 }
 
@@ -136,7 +136,7 @@ function validator(msg, isValid){
         p.classList.add('erro')
     }
     validacao.innerHTML = '';
-    validacao.appendChild(p);
+    validacao.appendChild(p);0
 };
 
 
