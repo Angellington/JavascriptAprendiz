@@ -95,7 +95,7 @@ form button {
     color: #fff;
     border: none;
     border-radius: 8px;
-    background-color: var(--primary-color);
+    background-color: #7eb77f4f;
     box-shadow: 2px 2px 2px black;
     cursor: pointer;
     transition: 0.2s ease;
@@ -103,4 +103,19 @@ form button {
 
 form button:hover {
     transform: scale(1.05);
+    background-color: var(--primary-color);
+}
+
+/* Class open by Javascript*/
+.correct, .bad{
+    background-color: rgb(223, 255, 175);
+    text-align: center;
+    font-size: 20px;
+    width: 10em;
+    padding: 10px;
+    box-shadow: 2px 2px 10px;
+}
+
+.bad {
+    background-color: #ff2828;
 }

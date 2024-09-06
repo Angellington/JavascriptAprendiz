@@ -17,7 +17,6 @@ form.addEventListener('submit', function(e){
     nasc = inputNasc.value;
     email = inputEmail.value;
     password = inputPassword.value;
-e
     
     // Fazer a validação e obter a mensagem e o status
 
@@ -124,9 +123,14 @@ function criarP() {
 }
 
 // Aparecer no validator
+
+// Função Validator recebe dois parametros
 function validator(msg, isValid){
+    // Criar o Seletor de validacao
     const validacao = document.querySelector('.validacao');
+    //Passou a função paragrafo
     const p = criarP();
+    // No paragrafo passou a mensagem do parametro 1
     p.innerHTML = msg;
 
     // Testando a cor
@@ -136,7 +140,7 @@ function validator(msg, isValid){
         p.classList.add('erro')
     }
     validacao.innerHTML = '';
-    validacao.appendChild(p);0
+    validacao.appendChild(p);
 };
 
 
