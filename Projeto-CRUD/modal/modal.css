@@ -337,3 +337,18 @@
 
 
 }
+
+.good, .bad {
+    background-color: rgb(77, 145, 77);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+}
+.bad {
+    background-color: rgb(143, 79, 79);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+}
