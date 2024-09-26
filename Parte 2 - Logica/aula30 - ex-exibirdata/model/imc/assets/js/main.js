@@ -38,29 +38,14 @@ function DayName(dayname){
     let dayname_text;
     
     switch(dayname){
-        case 0:
-            dayname_text = 'domingo';
-            break;
-        case 1:
-            dayname_text = 'segunda-feira';
-            break;
-        case 2:
-            dayname_text = 'terça-feira';
-            break;
-        case 3:
-            dayname_text = 'quarta-feira';
-            break;
-        case 4:
-            dayname_text = 'quinta-feira';
-            break;
-        case 5:
-            dayname_text = 'sexta-feira';
-            break;
-        case 6:
-            dayname_text = 'sábado'
-            break
-        default:
-            dayname_text = 'invalid'
+        case 0: dayname_text = 'domingo'; break;
+        case 1: dayname_text = 'segunda-feira'; break;
+        case 2: dayname_text = 'terça-feira'; break;
+        case 3: dayname_text = 'quarta-feira'; break;
+        case 4: dayname_text = 'quinta-feira'; break;
+        case 5: dayname_text = 'sexta-feira'; break;
+        case 6: dayname_text = 'sábado'; break;
+        default: dayname_text = 'invalid';
     }
     return dayname_text;
 }
