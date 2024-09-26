@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/* Fontes  */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Variaveis */
+:root {
+    --primary-color: rgb(132, 162, 168);
+    --primary-color-darker: rgb(84, 110, 116);
+}
+
+/* Estilização */
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    height: 100%;
+}
+
+.container {
+    max-width: 640px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 1.5em;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.25);
+
+}
+
+form input, form label, form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form input {
+    font-size: 24px;
+    height: 50px;
+    padding: 0 20px;
+}
+
+form input:focus {
+    outline: 1px solid var(--primary-color);
+}
+form button {
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+form button:hover {
+    background-color: var(--primary-color-darker);
+}
+
+form button:active{
+    background-color: rgb(50, 140, 156);
+}
+
+.circle {
+    background-color: #ffffff;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img {
+    background-color: aquamarine;
+    height: 15em;
+    width: 15em;
+    border-radius: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img#morning {
+    background-image: url("../img/morning.jpg");
+    background-position: center;
+}
+.img#afternoon {
+    background-image: url("../img/afternoon.jfif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img#noon {
+    background-image: url("../img/noon.png");
+    background-position: center;
+    filter: sepia(0.55);
+    filter: brightness(0.50);
+}

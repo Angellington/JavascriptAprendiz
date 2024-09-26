@@ -1,16 +1,14 @@
 console.clear()
 
-// const prompt = require('prompt-sync')();
+function adicionarDias(data, dias){
+    let novaData = new Date(data);
+    novaData.setDate(novaData.getDate() + dias);
+    return novaData;
+}
 
-// const input_ano = prompt('Digite ANO: ');
-// const input_mes = prompt('Digite MES: ');
-// const input_dia = prompt('Digite DIA: ');
+// Uso
+const dataInicial = new Date('2005-06-20');
+const diasParaAdicionar = 10;
 
-const ano = 2005;
-const mes = 6;
-const dia = 20;
-
-data = 
-
-console.log(data)
-
+const novaData = adicionarDias(dataInicial, diasParaAdicionar);
+console.log(novaData)
