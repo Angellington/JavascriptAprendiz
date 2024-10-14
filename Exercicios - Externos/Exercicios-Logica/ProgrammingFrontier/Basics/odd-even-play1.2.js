@@ -88,4 +88,4 @@ if(decision % 2 == 0){
 
 
 
-console.log(option, mynumber, cpnumber)
+console.log(`Your choice: ${option}, Your number: ${mynumber}, CP number: ${cpnumber}`);
