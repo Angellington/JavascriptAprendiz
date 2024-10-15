@@ -1,4 +1,5 @@
 console.clear()
+// eslint-disable-next-line no-undef
 const prompt = require('prompt-sync')()
 
 
