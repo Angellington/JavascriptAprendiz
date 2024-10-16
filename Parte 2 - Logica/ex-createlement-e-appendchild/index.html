@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRIAR O TEXTO COM O CREATE ELEMENT</title>
+</head>
+<body>
+    <h1>Digite uma coisa</h1>
+    <button id="button">ADICIONE UM TEXTO</button>
+
+
+    <script>
+        const button = document.getElementById('button')
+
+        button.addEventListener('click', () => {
+            texto = prompt('Digite um Valor')
+
+            let p = document.createElement('p')
+
+            p.innerHTML = texto
+
+            document.body.appendChild(p)
+        })
+    </script>
+</body>
+</html>
