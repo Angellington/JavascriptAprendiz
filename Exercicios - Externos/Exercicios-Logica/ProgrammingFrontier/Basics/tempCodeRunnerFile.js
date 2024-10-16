@@ -1,22 +1,27 @@
-console.clear()
-const prompt = require('prompt-sync')()
+while(true){
+    console.clear()
+    console.log(`${numbers.join(' ')} = RESULTADO`)
+    n = prompt('(Q - for QUIT) -Insert a number: ')
 
-// Selecting Odd or Even number
 
-while (true){
-    let mynumber = prompt('Tab (0 to 10): ');
-
-    if(isNaN(mynumber) || mynumber > 10 || mynumber < 0){
-        console.log("Tab again!")
-        continue
-    } else {
-        if(mynumber % 2 == 0){
-            console.log("Your number is ODD")
-            break;
-        } else {
-            console.log("Your number is even")
-            break;
-        }
+    if(n === 'Q' || n === 'q'){
+        console.log('Quitting...')
+        break
     }
-}
 
+    if(Number(n)){
+        numbers.push(n)
+        let operation = prompt('Select Opertion: (+/-/x-/:): ')
+        while (true){
+            if(operation === '+'){
+                numbers.push(operation)
+                break
+            } else {
+                continue
+            }
+        }
+       
+        continue
+    }
+
+}
