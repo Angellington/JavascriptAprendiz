@@ -26,6 +26,7 @@ function my_number(){
 }
 
 function cp_number(){
+    /*Hello*/
     while (true){
         let randomNumber = Math.floor(Math.random() * 11)
     
@@ -47,6 +48,7 @@ function cp_number(){
 
 
 let MeuNumero = my_number();
+
 let ComputadorNumero = cp_number();
 
 const addiction = MeuNumero + ComputadorNumero;
