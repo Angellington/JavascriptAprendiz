@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="bg-slate-400 flex justify-center">
+        <h1 class="p-10 text-3xl">Local Storage</h1>
+    </div>
+    <div class="bg-slate-100 p-20 m-20 flex justify-evenly">
+        <article>
+            <div class="flex flex-row gap-2">
+                <p>Nome da Pessoa: </p>
+                <b id="output_nome"></b>
+            </div>
+            <div class="flex flex-row gap-2">
+                <p>Idade da Pessoa: </p>
+                <b id="output_idade"></b>
+            </div>
+            <div class="flex flex-row gap-2">
+                <p>Atribuição Pessoa: </p>
+                <b id="output_atribuicao"></b>
+            </div>
+            <div class="flex flex-row gap-2">
+                <p>Observação: </p>
+                <b id="output_obs"></b>
+            </div>
+        </article>
+        <article>
+
+            <form name="form" id="form">
+                <div>
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div>
+                    <label for="age">Idade</label>
+                    <input type="text" id="age" required>
+                </div>
+                <div>
+                    <label for="atr">Atribuição</label>
+                    <input type="text" id="atr" name="atr" required>
+                </div>
+                <div>
+                    <label for="obs">Observação</label>
+                    <input type="text" id="obs" name="obs" required>
+                </div>
+                <div>
+                    <input class="bg-slate-400 rounded p-2" id="post" type="submit">
+                </div>
+
+
+            </form>
+        </article>
+    </div>
+</body>
+<script>
+    // Iniciar um gatilho ao apertar no botao enviar
+    const form = document.getElementById("form")
+
+    form.addEventListener('submit', function(e) {
+
+        e.preventDefault();
+
+        let get_nome = document.getElementById("name").value;
+        let get_idade = document.getElementById("age").value;
+        let get_atr = document.getElementById("atr").value;
+        let get_obs = document.getElementById("obs").value;
+
+       console.log(get_nome)
+       console.log(get_idade)
+       console.log(get_atr)
+       console.log(get_obs)
+
+       let memoria = "Boo, fantasma"
+       localStorage.setItem("Pessoa", "Minerva");
+       localStorage.setItem("nome", get_nome);
+       localStorage.setItem("idade", get_idade);
+       localStorage.setItem("atribuicao", get_atr);
+       localStorage.setItem("observacao", get_obs);
+    })
+
+
+
+</script>
+<script src="./"></script>
+
+</html>
