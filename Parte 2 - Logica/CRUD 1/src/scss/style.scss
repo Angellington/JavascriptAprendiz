@@ -1,0 +1,70 @@
+/* ! Comentário */
+
+/* Colors */
+$white: #d4d4d4;
+$soft: #fff;
+
+/* Default */
+$container: (
+  border-radius: 12px,
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.322),
+  width: 30vw,
+  padding-top: 2px,
+  padding: 20px
+);
+
+
+body{
+    padding: 0;
+    margin: 0;
+    line-height: none;
+}
+
+header{
+    background-color: $white;
+    padding: 20px;
+    h1{
+        background-color: white;
+        padding: 20px;
+        width: 20vw;
+        border-radius: 12px;
+        box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.322);
+    }
+}
+
+main{
+    padding: 12px;
+    #add{
+        @each $property, $value in $container{
+            #{$property}: #{$value}
+        }
+    }
+    form{
+        .input{
+            #nome{
+                padding: 12px;
+                border-radius: 12px;
+            }
+            input{
+                font-size: 20px;
+                width: 25vw;
+            }
+    
+        }
+        button{
+            padding: 8px;
+            border-radius: 4px;
+            border: 0.5px  solid rgb(0, 0, 0);
+            margin-top: 12px;
+        }
+        
+    }
+    #output{
+        padding: 12px;
+        .container{
+            @each $property, $value in $container{
+                #{$property}: #{$value}
+            }
+        }
+    }
+}
