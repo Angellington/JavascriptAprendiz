@@ -87,6 +87,35 @@ dlt.forEach(function(dlt){
         // Atualiza o localStorage com o array modificado
         localStorage.setItem("Names", JSON.stringify(storedNames));
 
+        
+
     })
 })
 
+const edit = document.querySelectorAll(".edit");
+
+edit.forEach(function(editButton) {
+    editButton.addEventListener("click", function(e) {
+        const index = e.target.getAttribute("data-index"); // Pega o índice do item
+
+        // Recupera os dados armazenados no localStorage
+        let storedNames = JSON.parse(localStorage.getItem("Names"));
+
+        if (storedNames && storedNames[index]) { // Verifica se o nome existe no índice
+            let recoverData = storedNames[index]; // Pega o dado correspondente ao índice
+
+            const input_nome = document.getElementById("nome");
+            input_nome.value = recoverData; // Preenche o campo de input com o dado recuperado
+
+            // A cada mudança no valor do input, o localStorage será atualizado
+            input_nome.addEventListener("input", function() {
+                storedNames[index] = input_nome.value; // Atualiza o nome no array
+                localStorage.setItem("Names", JSON.stringify(storedNames)); // Salva de volta no localStorage
+            });
+
+            alert(`Nome recuperado: ${recoverData}`); // Exibe o nome recuperado (opcional, pode ser removido)
+        } else {
+            alert("Dados não encontrados ou índice inválido");
+        }
+    });
+});
