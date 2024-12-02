@@ -12,5 +12,8 @@
   "description": "",
   "devDependencies": {
     "sass": "^1.81.0"
+  },
+  "dependencies": {
+    "crud-1": "file:"
   }
 }
