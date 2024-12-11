@@ -2,7 +2,6 @@ function criarCalculadora() {
     return {
         // Atributos
         display: document.querySelector('.display'),
-        btnClear: document.querySelector('.btn-clear'),
 
         // Métodos
         inicia() {
@@ -13,9 +12,9 @@ function criarCalculadora() {
 
         pressionaBackSpace() {
             this.display.addEventListener('keydown', e => {
-                if (e.key === 'Backspace') {
+                if (e.keyCode === 8) {
                     e.preventDefault();  // Impede o comportamento padrão de apagar
-                    this.apagaUm();
+                    this.clearDisplay()
                 }
             });
         },
@@ -30,9 +29,7 @@ function criarCalculadora() {
 
         pressionaEnter() {
             this.display.addEventListener('keyup', e => {
-                if (e.key === 'Enter') {
-                    this.realizaConta();
-                }
+                this.realizaConta();
             });
         },
 
@@ -40,23 +37,23 @@ function criarCalculadora() {
             let conta = this.display.value;
 
             try {
-                // Usar 'new Function()' como alternativa segura ao eval()
-                conta = new Function('return ' + conta)();
+                conta = eval(conta);
 
-                if (conta === undefined || conta === null) {
+                if(!conta){
                     alert("Conta inválida");
                     return;
                 }
 
                 this.display.value = String(conta);
-            } catch (err) {
+            } catch (e) {
                 alert("Conta Inválida");
+                return;
             }
         },
 
         clickButton() {
             // this -> calculadora
-            document.addEventListener('click', (e) => {
+            document.addEventListener('click', e => {
                 const el = e.target;
 
                 if (el.classList.contains('btn-num')) {
@@ -74,6 +71,8 @@ function criarCalculadora() {
                 if (el.classList.contains('btn-eq')) {
                     this.realizaConta();
                 }
+
+                this.display.focus();
             });
         },
 
