@@ -1,7 +1,0 @@
-new Object()
-new Array()
-new Map()
-new Set()
-new Date()
-new RegExp()
-new Function()

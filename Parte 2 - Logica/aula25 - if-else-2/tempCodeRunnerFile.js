@@ -1,1 +1,0 @@
-console.log("O número não está entre 0 e 5")
