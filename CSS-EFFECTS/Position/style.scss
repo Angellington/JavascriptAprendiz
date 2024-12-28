@@ -1,0 +1,53 @@
+div{
+    height: 50px;
+    background-color: #ccc;
+    border: 1px solid #222;
+    padding: 10px;
+    width: 100vh;
+}
+
+.relative {
+    position: relative;
+    background-color: #321;
+    color: #FFF;
+    left: 20px;
+    top: 50px;
+    bottom: 20px;
+    right: 100px;
+    width: 100%;
+    // transform: rotate(12deg);
+}
+
+.absolute{
+    /* Elemento solto. É bom ele ser filho do relative
+    
+    Se for perdido no mundo, ele estaria filho em relação a página 
+    */
+    height: 25px;
+    width: 70px;
+    background-color: #914;
+    position: absolute;
+    top: 20px;
+    // left: 20px;
+    left: 50%;
+}
+
+html {
+    padding-bottom: 1000px;
+}
+
+
+.fixed {
+    width: 200px;
+    background-color: cyan;
+    position: fixed;
+}
+
+.sticky{
+    width: 200px;
+    height: 100px;
+    top: 10px;
+    background-color: black;
+    color: white;
+    position: sticky;
+}
