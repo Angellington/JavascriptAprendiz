@@ -1,0 +1,58 @@
+// .container{
+//     background-color: #333;
+//     border: 3px  solid red;
+//     padding: 15px;
+//     display: grid;
+//     //                     col1  col2 col3
+//     grid-template-columns: 50px auto 10%;
+//     height: 35vh;
+//     grid-template-rows: 70% 30%;
+//     // gap: 5px;
+//     grid-row-gap: 10px;
+//     grid-column-gap: 20px;
+// }
+
+// .container div{
+//     background-color: #ccc;
+//     padding: 20px;
+//     border: 1px solid blue;
+// }
+
+// // Ao aplicar a regra, nada acontece
+
+
+/* Template area */
+
+.container{
+    background-color: #333;
+    border: 3px  solid red;
+    padding: 15px;
+    display: grid;
+    gap: 5px;
+    grid-template-areas: 
+        'header header header header'
+        'sidebar content content content'
+        'footer footer footer footer';
+}
+
+.container div{
+    background-color: #ccc;
+    padding: 20px;
+    border: 1px solid blue;
+}
+#header {
+    grid-area: header;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    height: 50vh;
+}
+
+#content {
+    grid-area: content;
+}
+
+#footer {
+    grid-area: footer;
+}
