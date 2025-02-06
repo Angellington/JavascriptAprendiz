@@ -14,6 +14,8 @@ console.log(pessoa[key]); // Acessando propriedade por meio de variável
 
 const pessoa1 = new Object();
 
+// freeze pessoa
+Object.freeze(pessoa1);
 pessoa1.name = "Minerva";
 
 console.log(pessoa1)
@@ -45,3 +47,4 @@ console.log(pessoa1.getBirthdate());
 for (let key in pessoa1) {
     console.log(pessoa1[key]);
 }
+
